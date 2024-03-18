@@ -14,12 +14,12 @@ spec:
     namespace: rhtap-app-development
     server: https://kubernetes.default.svc
   syncPolicy:
-    managedNamespaceMetadata:
-      labels: 
-        argocd.argoproj.io/managed-by: rhtap
+    # managedNamespaceMetadata:
+    #   labels: 
+    #     argocd.argoproj.io/managed-by: rhtap
     automated: 
       prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true
+      # - CreateNamespace=true
       - PruneLast=true
